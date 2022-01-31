@@ -1,0 +1,4 @@
+{
+    "db":"mongodb+srv://test:50407303Firas@cluster0.0nthb.mongodb.net/app?retryWrites=true&w=majority",
+    "secret":"50407303Firas"
+}
