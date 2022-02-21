@@ -1,10 +1,12 @@
 const express =require ("express");
 const connectDB = require("./config/connectDB");
 const user = require('./routes/user');
+const ProductRoote = require('./routes/ProductRoute');
 
 const app =express();
 app.use(express.json());
 app.use("/user",user);
+app.use("/allproducts",ProductRoote)
 
 connectDB();
 

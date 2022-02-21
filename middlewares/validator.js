@@ -19,6 +19,15 @@ exports.loginRules=()=>[
     check('password','password at least 6 characters').isLength({min:6})
 ];
 
+exports.createproductsRules=()=>[
+    check('name','Please Enter Product Name').notEmpty(),
+    check('description','Please Enter Product Description').notEmpty(),
+    check('price','Please Enter Product Price').isLength({max:8},'Price cannot exceed 8 caracters').notEmpty(),
+    check('stock','Please Enter Product Price').isLength({max:4},'Stock cannot exceed 4 caracters'),
+    
+];
+
+
 
 exports. validator =(req,res,next)=> {
     const errors =validationResult(req);
