@@ -17,7 +17,7 @@ const productsSchema = new schema({
     required: true
    
   },
-  rating: {
+  ratings: {
     type: Number,
     default: 0,
   },
@@ -43,12 +43,17 @@ const productsSchema = new schema({
     
     default: 0,
   },
-  NumOfReviews: {
+  numOfReviews: {
     type: Number,
     default: 0,
   },
   reviews: [
     {
+      user: {
+        type: mongoose.Schema.ObjectId,
+        ref: "User",
+        required: true,
+      },
       name: {
         type: String,
         required: true,
@@ -66,7 +71,7 @@ const productsSchema = new schema({
   user: {
     type: mongoose.Schema.ObjectId,
     ref: "User",
-    required: true,
+    
   },
   createDate: {
     type: Date,

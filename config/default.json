@@ -1,4 +1,8 @@
 {
     "db":"mongodb+srv://test:50407303Firas@cluster0.0nthb.mongodb.net/app?retryWrites=true&w=majority",
-    "secret":"50407303Firas"
+    "secret":"50407303Firas",
+    "JWT_Expire":"5d",
+    "CLOUDINARY_NAME":"firas",
+    "CLOUDINARY_API_KEY":"314589862464819",
+    "CLOUDINARY_API_SECRET":"JTxLb88V95FQwztKbrmEkurTflU"
 }

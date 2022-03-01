@@ -27,6 +27,13 @@ exports.createproductsRules=()=>[
     
 ];
 
+exports.updateProfileRules=()=>[
+    check('fullName','this feild is required').notEmpty(),
+    check('email','this feild is required').notEmpty(),
+    check('email','this feild should be a valid email').isEmail()
+    
+];
+
 
 
 exports. validator =(req,res,next)=> {
