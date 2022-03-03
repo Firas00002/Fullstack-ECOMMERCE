@@ -13,11 +13,11 @@ const roleCheck = require("../middlewares/verifyRoles");
 
 const router = express.Router();
 
-router.post("/order/new",verifyAuth,newOrder);
+router.post("/order/new",newOrder);
 
 router.get("/order/:id", verifyAuth, verifyOrders, getSingleOrder);
 
-router.get("/orders/me", verifyAuth, myOrders);
+router.get("/orders/me", myOrders);
 
 router.get("/admin/orders", verifyAuth, roleCheck("admin"), getAllOrders);
 

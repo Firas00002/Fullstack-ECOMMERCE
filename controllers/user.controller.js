@@ -85,19 +85,19 @@ exports.login = async (req, res) => {
   }
 };
 
-// exports.logout= async(req,res)=>{
+exports.logout= async(req,res)=>{
 
-//   const token= req.headers.authorization('token',null)
+  
 
-//   try {
+  try {
+   res.status(201).json({msg:' deconnecté'})
+    
+  
 
-//     res.status(201).json({msg:' deconnecté'})
-//   res.send(token)
-
-//   } catch (error) {
-//     res.status(500).json({ msg: error.message });
-//   }
-// }
+  } catch (error) {
+    res.status(500).json({ msg: error.message });
+  }
+}
 
 // get user details
 

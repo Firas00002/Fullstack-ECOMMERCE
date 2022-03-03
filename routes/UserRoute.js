@@ -11,7 +11,7 @@ const router = express.Router();
 router.post("/register",registerRules(),validator,register);
 router.post("/login", loginRules(),validator,login);
 // router.get('/auth',verifyAuth,auth)
-// router.get('logout',logout);
+router.get('/logout',logout);
 router.get("/me",verifyAuth, getUserDetails);
 router.put("/me/update",verifyAuth,updateProfileRules(),updateProfile)
 
