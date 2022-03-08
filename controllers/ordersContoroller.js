@@ -42,7 +42,7 @@ exports.getSingleOrder = async (req, res) => {
   try {
     const order = await Orders.findById(req.params.id).populate(
       "user",
-      "name email"
+      "fullName email"
     );
 
     res.status(200).json({

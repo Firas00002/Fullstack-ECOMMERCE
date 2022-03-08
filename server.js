@@ -3,6 +3,7 @@ const connectDB = require("./config/connectDB");
 const UserRoute = require('./routes/UserRoute');
 const ProductRoute = require('./routes/ProductRoute');
 const OrdersRoute = require('./routes/OrdersRoute');
+const PayementRoute = require('./routes/PayementRoute');
 const cloudinary =require("cloudinary")
 const config =require("config");
 let bodyParser = require('body-parser');
@@ -18,6 +19,7 @@ app.use(fileUpload())
 app.use("/user",UserRoute);
 app.use("/allproducts",ProductRoute)
 app.use("/allorders",OrdersRoute)
+app.use("/payement", PayementRoute)
 
 connectDB();
 

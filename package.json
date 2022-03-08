@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon server --ignore client",
+    "start": "nodemon server ",
     "open": "concurrently \"npm start\" \"cd client && npm start\""
   },
   "author": "",
@@ -20,6 +20,7 @@
     "express-validator": "^6.14.0",
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^6.1.8",
-    "nodemon": "^2.0.15"
+    "nodemon": "^2.0.15",
+    "stripe": "^8.207.0"
   }
 }

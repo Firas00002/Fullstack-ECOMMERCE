@@ -40,7 +40,7 @@ exports.register = async (req, res) => {
       email: newuser.email,
       role: newuser.role,
     };
-    let token = jwt.sign(payload, secret, { expiresIn: JWT_Expire });
+    let token = jwt.sign(payload, secret);
     res.send({
       token,
       user: {
@@ -69,6 +69,7 @@ exports.login = async (req, res) => {
       fullName: user.fullName,
       email: user.email,
       role: user.role,
+      avatar: user.avatar,
     };
     let token = jwt.sign(payload, secret);
     res.send({
@@ -78,6 +79,7 @@ exports.login = async (req, res) => {
         fullName: user.fullName,
         email: user.email,
         role: user.role,
+        avatar: user.avatar,
       },
     });
   } catch (error) {

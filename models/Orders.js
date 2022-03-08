@@ -3,105 +3,105 @@ const mongoose = require("mongoose");
 const orderSchema = new mongoose.Schema({
   shippingInfo: {
     address: {
-      type: String,
-      required: true,
+      type: String
+      
     },
     city: {
-      type: String,
-      required: true,
+      type: String
+    
     },
 
     state: {
-      type: String,
-      required: true,
+      type: String
+      
     },
 
     country: {
-      type: String,
-      required: true,
+      type: String
+      
     },
     pinCode: {
-      type: Number,
-      required: true,
+      type: Number
+      
     },
     phoneNo: {
-      type: Number,
-      required: true,
+      type: Number
+     
     },
   },
   orderItems: [
     {
       name: {
-        type: String,
-        required: true,
+        type: String
+        
       },
       price: {
-        type: Number,
-        required: true,
+        type: Number
+        
       },
       quantity: {
-        type: Number,
-        required: true,
+        type: Number
+        
       },
       image: {
-        type: String,
-        required: true,
+        type: String
+        
       },
       product: {
         type: mongoose.Schema.ObjectId,
-        ref: "Product",
-        required: true,
+        ref: "Product"
+        
       },
     },
   ],
   user: {
     type: mongoose.Schema.ObjectId,
-    ref: "User",
-    required: true,
+    ref: "User"
+    
   },
   paymentInfo: {
     id: {
-      type: String,
-      required: true,
+      type: String
     },
+      
     status: {
-      type: String,
-      required: true,
+      type: String
+      
     },
   },
   paidAt: {
-    type: Date,
-    required: true,
+    type: Date
+   
   },
   itemsPrice: {
     type: Number,
-    required: true,
-    default: 0,
+    
+    default: 0
   },
   taxPrice: {
     type: Number,
-    required: true,
-    default: 0,
+   
+    default: 0
   },
   shippingPrice: {
     type: Number,
-    required: true,
-    default: 0,
+    
+    default: 0
   },
   totalPrice: {
     type: Number,
-    required: true,
-    default: 0,
+   
+    default: 0
   },
   orderStatus: {
     type: String,
-    required: true,
-    default: "Processing",
+   
+    default: "Processing"
   },
   deliveredAt: Date,
   createdAt: {
     type: Date,
-    default: Date.now,
+    default: Date.now
   },
 });
 
